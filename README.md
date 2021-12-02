@@ -12,6 +12,7 @@ Uses
 6. Discord API - https://discord.com/developers/
     - will need to get API Token
 
+Add tokens to [app.environment.json](https://github.com/eddinsw/AwcGamerDiscordBot/blob/main/DiscordBot/app.environment.json)
 
 Current Command list
 
