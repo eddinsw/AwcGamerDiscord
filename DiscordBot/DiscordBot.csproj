@@ -17,9 +17,6 @@
     <None Remove="Common\Files\ronSwanson.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.environment.DEVELOPMENT.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="app.environment.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
