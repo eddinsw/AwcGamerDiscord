@@ -1,0 +1,15 @@
+﻿{
+  "Discord": {
+    "Token": "",
+    "CommandPreFix": "!"
+  },
+  "OpenWeather": {
+    "ApiKey": ""
+  },
+  "Perspective": {
+    "Token": ""
+  },
+  "Unsplash": {
+    "AccessToken": ""
+  }
+}

@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk;Microsoft.NET.Sdk.Publish">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="app.environment.DEVELOPMENT.json" />
+    <None Remove="app.environment.json" />
+    <None Remove="Common\Files\8BallAnswers.txt" />
+    <None Remove="Common\Files\AlcoholQuotes.txt" />
+    <None Remove="Common\Files\BeerQuotes.txt" />
+    <None Remove="Common\Files\DeveloperQuotes.json" />
+    <None Remove="Common\Files\insults.json" />
+    <None Remove="Common\Files\MovieQuotes.json" />
+    <None Remove="Common\Files\quotes.json" />
+    <None Remove="Common\Files\ronSwanson.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.environment.DEVELOPMENT.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app.environment.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Common\Files\ronSwanson.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\Files\8BallAnswers.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Files\AlcoholQuotes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Files\BeerQuotes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Files\DeveloperQuotes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Files\insults.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Files\MovieQuotes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Files\quotes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Discord.Net" Version="2.3.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DiscordBot.Configuration\DiscordBot.Configuration.csproj" />
+    <ProjectReference Include="..\DiscordBot.Database\DiscordBot.Database.csproj" />
+    <ProjectReference Include="..\DiscordBot.OpenWeather\DiscordBot.OpenWeather.csproj" />
+    <ProjectReference Include="..\DiscordBot.Perspectiveapi\DiscordBot.Perspectiveapi.csproj" />
+  </ItemGroup>
+</Project>
